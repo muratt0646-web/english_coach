@@ -1,0 +1,29 @@
+name: english_coach
+description: English Coach AI - offline-first dikey dilim (Faz 1B-1)
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # SQLite - masaustu (Windows/Linux/macOS) icin FFI surucusu
+  sqflite_common_ffi: ^2.3.3
+  # Modern SQLite kutuphanesini paketler (VACUUM INTO icin >=3.27 garantisi)
+  sqlite3_flutter_libs: ^0.5.24
+  path: ^1.9.0
+  path_provider: ^2.1.4
+  # PDF: saf Dart, CEVRIMDISI uretir. Ag veya bulut kullanmaz.
+  # 'printing' paketi EKLENMEDI (platform eklentisi getirir);
+  # dosya yazimi dart:io + path_provider ile yapilir.
+  pdf: ^3.11.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
